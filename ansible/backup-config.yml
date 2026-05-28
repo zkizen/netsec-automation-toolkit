@@ -1,0 +1,17 @@
+---
+- name: Backup Router Configurations
+  hosts: routers
+  gather_facts: no
+
+  tasks:
+    - name: Backup running config
+      ios_command:
+        commands:
+          - show running-config
+      register: config_output
+
+    - name: Save config to file
+      copy:
+        content: "{{ config_output.stdout[0] }}"
+        dest: "../backups/{{ inventory_hostname }}_backup.txt"
+      delegate_to: localhost
