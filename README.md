@@ -127,4 +127,4 @@ Script jalan → ping tiap device setiap 30 detik →
 ## Author
 
 **Muhammad Zaki Zein** — [@zkizen](https://github.com/zkizen)  
-SMK TKJ Graduate · Incoming Politeknik Negeri Jakarta
+SMK TKJ Graduate
